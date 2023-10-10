@@ -1,0 +1,92 @@
+.container{
+    margin: auto;
+    max-width: 1212px;
+    background: #FFF;
+    flex-shrink: 0;
+    padding: 5rem 0 5rem 0;
+  }
+
+
+  
+  .gallery{
+      position: relative;
+      display: flex;
+      gap: 1.875rem;
+      width: 100%;
+      padding-bottom: 1rem;
+    }
+    
+    .gallery img{
+      
+      object-fit: cover;
+      display: block;
+    }
+  
+    
+    .container-file img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .columnMedio{
+      width: 50%;
+    }
+    
+    .large{
+      width: 100%;
+      max-width: 36.875rem;
+      object-fit: cover;
+    }
+    
+  .small{
+      width: 100%;
+      max-width: 287px;
+      
+      object-fit: cover;
+    }
+    
+    .normal{
+      width: 100%;
+      max-width: 590px;
+      display: flex;
+      gap: 1rem;
+      object-fit: cover;
+    }
+    
+    
+    .fileTercio{
+      width: 33.33%;
+    }
+    
+    .container-file-2-3{
+      width: 66.66%;
+    }
+    
+    .file{
+      display: flex;
+    
+    }
+  
+    @media screen and (max-width:640px) {
+    .containerMobile{
+      width: 100vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .galleryMobile{
+      position: relative;
+      
+    }
+    .normalMobile{
+      position: relative;
+    }
+    .smallMobile{
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      padding: 1.2rem 0 1.2rem 0;
+    }
+    
+    }

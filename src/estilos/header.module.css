@@ -1,0 +1,353 @@
+.container{
+    margin: auto;
+    max-width: 79.5rem;
+    max-height: 64rem;
+    background: #FFF;
+    
+}
+.image{
+    max-width: 21.875rem;
+    margin: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.line{
+    max-width: 75.75rem;
+    height: 1px;
+    flex-shrink: 0;
+    background-color: #000;
+    margin: auto;
+}
+.groupBtn{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+    font-size: 2.25rem;
+    
+}
+
+.svg{
+    position: absolute;
+    top: -1.25rem;
+    left: -8.0625rem;
+    color: #000;
+}
+
+.btn1{
+    position: relative;
+    z-index: 1;
+    padding: 1.25rem 1.25rem;
+}
+
+.btn1:hover{
+    color: #FFF;
+    transition: 0.2s;
+    transition-delay: 0.8s;
+}
+
+.btn1::before{
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+z-index: -1;
+transform: scale(0);
+transform-origin: top left;
+}
+
+.btn1:hover::before{
+    transform: scale(1);
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+.btn1::after{
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16"><path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/></svg>');
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    opacity: 0;
+}
+
+.btn1:hover::after{
+    animation: draw 0.9s linear forwards;
+    opacity: 1;
+}
+
+@keyframes draw{
+    0%
+    {
+        top:-22px;
+        left: 0px;
+    }
+    20%
+    {
+        top:-22px;
+        left: 100%;
+    }
+    40%
+    {
+        top:calc(100% - 20px);
+        left: 100%;
+    }
+    60%
+    {
+        top:calc(100% - 20px);
+        left: 0;
+    }
+    80%
+    {
+        top:calc(0% - 20px);
+        left: 0;
+    }
+    100%
+    {
+        top:calc(100% - 20px);
+        left: 100%;
+    }
+   
+}
+
+.btn1 span{
+    position: absolute;
+}
+
+.btn1 span:nth-child(1),
+.btn1 span:nth-child(3){
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+.btn1 span:nth-child(1){
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.btn1:hover span:nth-child(1){
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+.btn1 span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.btn1:hover span:nth-child(3){
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+.btn1 span:nth-child(2),
+.btn1 span:nth-child(4){
+    height: 100%;
+    width: 2px;
+    background: #000;
+}
+.btn1 span:nth-child(2){
+    top: 0;
+    right: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+.btn1:hover span:nth-child(2){
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+.btn1 span:nth-child(4){
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+.btn1:hover span:nth-child(4){
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+
+.btn2{
+    clear: both;
+    background: linear-gradient(to right, #000 50%, #FFF 50%);
+    background-size: 210% 100%;
+    background-position: 98% bottom;
+    cursor: pointer;
+    color: #000;
+    padding: 20px 20px;
+    transition: 0.8s;
+    
+}
+.btn2:hover { 
+    background-position:left bottom;
+    color:white;
+    transition:0.5s;
+}
+
+.btn3{
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px;
+}
+
+.effect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+.btn3:hover{
+    color:white;
+    background:black;
+}
+  .btn3:hover .effect{
+    
+    transition: 0.3s linear ease;
+    animation: effect 0.7s linear forwards;
+  
+  }
+  
+  @keyframes effect{
+    0%{
+      -webkit-clip-path: polygon(38% 27%, 50% 40%, 57% 27%, 55% 50%, 59% 65%, 49% 57%, 41% 75%, 43% 56%, 31% 50%, 43% 44%);
+  clip-path: polygon(38% 27%, 50% 40%, 57% 27%, 55% 50%, 59% 65%, 49% 57%, 41% 75%, 43% 56%, 31% 50%, 43% 44%);
+  background: white;
+    }
+    12.5%{
+      -webkit-clip-path: polygon(38% 27%, 51% 39%, 66% 38%, 57% 58%, 62% 80%, 45% 76%, 28% 85%, 29% 62%, 17% 48%, 32% 42%);
+  clip-path: polygon(38% 27%, 51% 39%, 66% 38%, 57% 58%, 62% 80%, 45% 76%, 28% 85%, 29% 62%, 17% 48%, 32% 42%);
+  background: white;
+    }
+    25%{
+      -webkit-clip-path: polygon(43% 3%, 69% 12%, 77% 36%, 76% 70%, 67% 93%, 46% 95%, 24% 95%, 13% 79%, 8% 46%, 19% 15%);
+  clip-path: polygon(43% 3%, 69% 12%, 77% 36%, 76% 70%, 67% 93%, 46% 95%, 24% 95%, 13% 79%, 8% 46%, 19% 15%);
+  background: white;
+    }
+      /* 75%{
+     -webkit-clip-path: polygon(43% 0, 90% 0, 90% 52%, 90% 100%, 67% 100%, 47% 100%, 26% 100%, 8% 100%, 8% 46%, 7% 0);
+  clip-path: polygon(43% 0, 90% 0, 90% 52%, 90% 100%, 67% 100%, 47% 100%, 26% 100%, 8% 100%, 8% 46%, 7% 0);
+    } */
+    /* 37.5%{
+      -webkit-clip-path: polygon(43% 0, 100% 0, 100% 45%, 100% 100%, 47% 100%, 26% 100%, 0 100%, 0 52%, 0 0);
+  clip-path: polygon(43% 0, 100% 0, 100% 45%, 100% 100%, 47% 100%, 26% 100%, 0 100%, 0 52%, 0 0);
+  background: white;
+    } */
+    37.5%{
+        -webkit-clip-path: polygon(43% 0, 100% 0, 100% 45%, 100% 100%, 47% 100%, 26% 100%, 0 100%, 0 52%, 0 0);
+        clip-path: polygon(43% 0, 100% 0, 100% 45%, 100% 100%, 47% 100%, 26% 100%, 0 100%, 0 52%, 0 0);
+        background: white;
+    }
+    50%{
+        -webkit-clip-path: polygon(43% 0, 90% 0, 90% 52%, 90% 100%, 67% 100%, 47% 100%, 26% 100%, 8% 100%, 8% 46%, 7% 0);
+        clip-path: polygon(43% 0, 90% 0, 90% 52%, 90% 100%, 67% 100%, 47% 100%, 26% 100%, 8% 100%, 8% 46%, 7% 0);
+        background: white;
+    }
+    62.5%{
+      -webkit-clip-path: polygon(43% 3%, 69% 12%, 77% 36%, 76% 70%, 67% 93%, 46% 95%, 24% 95%, 13% 79%, 8% 46%, 19% 15%);
+  clip-path: polygon(43% 3%, 69% 12%, 77% 36%, 76% 70%, 67% 93%, 46% 95%, 24% 95%, 13% 79%, 8% 46%, 19% 15%);
+  background: white;
+    }
+      75%{
+     -webkit-clip-path: polygon(38% 27%, 51% 39%, 66% 38%, 57% 58%, 62% 80%, 45% 76%, 28% 85%, 29% 62%, 17% 48%, 32% 42%);
+  clip-path: polygon(38% 27%, 51% 39%, 66% 38%, 57% 58%, 62% 80%, 45% 76%, 28% 85%, 29% 62%, 17% 48%, 32% 42%);
+  background: white;
+    }
+    87.5%{
+     -webkit-clip-path: polygon(38% 27%, 50% 40%, 57% 27%, 55% 50%, 59% 65%, 49% 57%, 41% 75%, 43% 56%, 31% 50%, 43% 44%);
+  clip-path: polygon(38% 27%, 50% 40%, 57% 27%, 55% 50%, 59% 65%, 49% 57%, 41% 75%, 43% 56%, 31% 50%, 43% 44%);
+  background: white;
+    }
+
+    100%{  
+     background: black;
+     color: white;
+       }
+  }
+  .svgIcon{
+    display: none;
+  }
+
+  @media screen and (max-width: 640px){
+    .containerMobile{
+        width: 100%;
+        position: relative;
+    }
+    .contactMailMobile{
+        position: relative;
+        background-color: #FFF;
+        padding: 5rem 1rem 5rem 1rem;
+    }
+
+    .contactBackMobile{
+        position:relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    
+    .containerImgMobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    .imgMobile{
+        min-height: 1.5625rem;
+        display: flex;
+        gap: .5rem;
+    }
+    
+    .imgMobile p{
+        font-size: 0.75rem;
+        color: #727272;
+    }
+    .containerEmailMobile{
+        font-size: 1.5625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .emailMobile{
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid #000;
+background: #ffffff;
+box-shadow:  8px 8px 20px #8a8a8a,
+             -8px -8px 20px #ffffff;
+    }
+    .imgLogo{
+        height: 15.625rem;
+        width: 15.625rem;
+    }
+    .btnMobile{
+        position: relative;
+        z-index: 1;
+        padding: 1.25rem 1.25rem;
+        font-size: 1.5625rem;
+    }
+      
+  }
